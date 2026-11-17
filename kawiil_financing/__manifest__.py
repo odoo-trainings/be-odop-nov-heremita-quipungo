@@ -1,43 +1,13 @@
-# Assignment 2.01: initialize the kawiil_financing manifest.
-#
-# Fill in every value marked TODO below, then add the one file this module is
-# still missing:
-#
-#   kawiil_financing/static/description/icon.png  your app icon. Both the file
-#                                                 name and the folder path have
-#                                                 to match exactly.
-#
-# Odoo reads this file to build the Apps list. Spelling matters throughout the
-# module: two underscores on each side of __manifest__ and __init__. Get one
-# wrong and Odoo skips the whole directory without saying why.
+
 {
-    # The app title in the Apps list. This is the text you search for when you
-    # install the module.
-    "name": "TODO",
-    # One line saying what the module does, shown under the title.
-    "summary": "TODO",
-    # Where the app is filed in the Apps list. Odoo splits this on "/", so
-    # "Parent/Child" files it under a Child group inside Parent.
-    "category": "TODO",
-    # This module's own version number. Odoo puts the series in front of it
-    # for you, so 1.0.0 is stored as 20.0.1.0.0. Leave as is.
+    "name": "Kawiil Financing",
+    "summary": "Streamlines the loan application process for dealerships.",
+    "category": "Kawiil/Custom Modules",
     "version": "1.0.0",
-    # Leave as is.
-    "author": "Odoo",
-    # The modules Odoo must install before this one. "base" is the framework
-    # itself, so every module depends on it.
-    #
-    # Assignment 2.03: this module starts linking to products, so swap "base"
-    # for "product". Drop "base" when you do, product already depends on it
-    # and Odoo installs the whole chain for you.
-    #
-    # Assignment 4.01: add "contacts", the partner form you extend lives there.
-    #
-    # Assignment 4.02: add "mail". product already pulls it in, but a module
-    # lists what it uses itself, it should not rely on another module's
-    # dependencies staying the same.
+    "author": "ODOP Trainee",
+    "maintainer": "José M. Quipungo",  #
+    "website": "https://tis.ao",
     "depends": ["base"],
-    # Odoo Proprietary License, the default for custom customer work.
     "license": "OPL-1",
     # XML and CSV files Odoo loads on install, in the order you list them.
     #
