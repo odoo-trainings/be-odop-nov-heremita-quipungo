@@ -3,4 +3,4 @@
 
 # Assignment 2.02: import the models folder, so Odoo picks up the model you
 # define inside it.
-# from . import models
+from . import models
