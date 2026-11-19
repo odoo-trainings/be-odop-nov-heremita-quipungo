@@ -7,7 +7,7 @@
 # importing a file that does not exist yet stops the whole module from loading.
 
 # Assignment 2.02: the main model.
-# from . import loan_application
+from . import loan_application
 
 # Assignment 2.09: tags, document types and the compliance checklist.
 # from . import loan_application_tag

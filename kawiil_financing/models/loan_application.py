@@ -57,10 +57,20 @@ class LoanApplication(models.Model):
 
     # Assignment 2.02: the application's own data
 
-    # Worked example. "string" is the label the user sees on screen. Leave it
-    # off and Odoo derives one from the field name, which would give you "Name"
-    # here rather than "Application Number".
-    name = fields.Char(string="Application Number")
+    name = fields.Char(string="Application Reference", required=True, copy=True)
+    interest_rate = fields.Float(string="Interest Rate", digits=(5, 2), required=True)
+    loan_term = fields.Integer(string="Loan Term (Months)", default=36)
+    date_applied = fields.Date(string='Application Date', default=fields.Date.today)
+    state = fields.Selection(
+        selection=[
+            ("draft", "Draft"), ("sent", "Submitted"), ("credit_check", "Credit Check"), ("approved", "Approved"),
+            ("rejected", "Rejected"), ("signed", "Signed"), ("canceled", "Canceled"),
+        ], string="Status ", default="draft", copy=False
+    )
+    active = fields.Boolean(string="Active",default=True,copy=False)
+    notes = fields.Html(string="Notes",copy=False,)
+
+
 
     # ! Assignment 2.08 — leave this commented until you reach 2.08.
     # ! It replaces the name line above; delete that one then.
